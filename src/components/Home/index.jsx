@@ -3,14 +3,23 @@ import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Navbar from '../../assets/Navbar'
+import { Carousel } from 'rsuite';
+
 
 const Home = () => {
     return (
-        <div style={{backgroundColor:"black",paddingTop:"40px",padding:"20px"}}>
+        <div>
             <div style={{marginTop:"0"}}>
-                <Skeleton variant="rounded" width="100%" height={60} sx={{ bgcolor: 'grey.900' }} />
+                
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <Skeleton variant="rounded" width="60%" height={400} sx={{ bgcolor: 'grey.900' }} />
+                    <Carousel autoplay className="custom-slider" style={{width:"70%"}}>
+                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1" height="250" />
+                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=2" height="250" />
+                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=3" height="250" />
+                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4" height="250" />
+                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5" height="250" />
+                    </Carousel>
                 </div>
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
                     <Typography component="div" key={'h2'} variant={'h2'}>
