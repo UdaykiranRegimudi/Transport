@@ -6,12 +6,11 @@ import MagicIcon from '@rsuite/icons/legacy/Magic';
 import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';
 
 const styles = {
-  width: 240,
-  display: 'inline-table',
-  marginRight: 10,
-  backgronudColor:"#1a1d24",
-  backgroundSize:"cover",
-  minHeight:"200vh",
+  
+  position: "fixed",
+  left: 0,
+  maxWidth:"20vw"
+  
 };
 
 const CustomSidenav = ({ appearance, openKeys, expanded, onOpenChange, onExpand, ...navProps }) => {
@@ -68,9 +67,6 @@ const CustomSidenav = ({ appearance, openKeys, expanded, onOpenChange, onExpand,
             <Nav.Item eventKey="2"  icon={<GroupIcon />}>
               User Group
             </Nav.Item>
-            
-           
-            
           </Nav>
         </Sidenav.Body>
         
