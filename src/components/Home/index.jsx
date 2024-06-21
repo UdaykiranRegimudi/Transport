@@ -1,7 +1,7 @@
 import React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
-
+import { useState, useEffect } from 'react';
 import { Carousel } from 'rsuite';
 
 const LicenseData = [
@@ -28,6 +28,38 @@ const LicenseData = [
 
 ]
 
+const VehicleData = [
+    {
+        imageUrl:"/Vehicle.png",
+        heading:"Vehicle Registration",
+        desc:"One click for all the vehicle related citizen services"
+    },
+    {
+        imageUrl:"/Fancy.png",
+        heading:"Fancy Number Allocation",
+        desc:"Your favorite number for your favorite vehicle"
+    },
+    {
+        imageUrl:"/Permit.png",
+        heading:"National Permit",
+        desc:"Seamless online way for vehicle permits"
+    },
+    {
+        imageUrl:"/Other.png",
+        heading:"Other Services",
+        desc:"LExplore the services related to your vehicle here"
+    },
+]
+
+const images = [
+    {imageUrl:"/C1.png"},
+    {imageUrl:"/C2.png"},,
+    {imageUrl:"/C3.png"},
+    {imageUrl:"/C4.png"},
+    {imageUrl:"/C5.png"},
+]
+
+
 
 const SkeletonComponent = () => {
     return (
@@ -36,118 +68,53 @@ const SkeletonComponent = () => {
                 
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
                     <Carousel autoplay className="custom-slider" style={{width:"70%"}}>
-                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1" height="250" />
+                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1" height="250" /> 
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=2" height="250" />
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=3" height="250" />
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4" height="250" />
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5" height="250" />
                     </Carousel>
                 </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <Typography component="div" key={'h2'} variant={'h2'}>
-                        <Skeleton width={500} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <Typography component="div" key={'p'} variant={'p'}>
-                        <Skeleton width={1000} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <Typography component="div" key={'h2'} variant={'h2'}>
-                        <Skeleton width={500} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <Typography component="div" key={'p'} variant={'p'}>
-                        <Skeleton width={1000} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <Typography component="div" key={'h2'} variant={'h2'}>
-                        <Skeleton width={500} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <Typography component="div" key={'p'} variant={'p'}>
-                        <Skeleton width={1000} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <Typography component="div" key={'h2'} variant={'h2'}>
-                        <Skeleton width={500} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <Typography component="div" key={'p'} variant={'p'}>
-                        <Skeleton width={1000} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    
-                </div>
+                {items}
+                
             </div>
         </div>
     );
 };
 
+
+const items = [];
+for(let i = 0 ; i < 2 ;i++){
+    items.push(
+        <div>
+        <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
+            <Typography component="div" key={'h2'} variant={'h2'}>
+                <Skeleton width={500} sx={{ bgcolor: 'grey.900' }}/>
+            </Typography>
+        </div>
+        <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
+            <Typography component="div" key={'p'} variant={'p'}>
+                <Skeleton width={1000} sx={{ bgcolor: 'grey.900' }}/>
+            </Typography>
+        </div>
+        <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
+            <div style={{marginRight:"20px"}}>
+                <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
+            </div>
+            <div style={{marginRight:"20px"}}>
+                <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
+            </div>
+            <div style={{marginRight:"20px"}}>
+                <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
+            </div>
+            <div style={{marginRight:"20px"}}>
+                <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
+            </div>
+            
+        </div>
+    </div>
+    )
+}
 
 const OrginalComponent = () =>{
     return(
@@ -156,7 +123,12 @@ const OrginalComponent = () =>{
                 
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
                     <Carousel autoplay className="custom-slider" style={{width:"70%"}}>
-                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1" height="250" />
+                        {/* {images.map((each,index) => {
+                            return(
+                                <img key={index} src={each.imageUrl} height="250" />
+                            )
+                        })} */}
+                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1" height="250" /> 
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=2" height="250" />
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=3" height="250" />
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4" height="250" />
@@ -185,93 +157,56 @@ const OrginalComponent = () =>{
                          </div>
                     ))}
                     
-                    
                 </div>
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <Typography component="div" key={'h2'} variant={'h2'}>
-                        <Skeleton width={500} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
+                    <h4 style={{color:"red"}}>Vehicle Related Services</h4>
                 </div>
                 <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <Typography component="div" key={'p'} variant={'p'}>
-                        <Skeleton width={1000} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
+                    <p style={{color:"green"}}>Various services related to registration of vehicle/already registered vehicle like Appointment Booking, Application Status, Duplicate Registration, Change of Address etc.</p>
                 </div>
                 <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
+                    {VehicleData.map(each =>(
+                        <div style={{marginRight:"20px",height:"43vh"}} className="w-1/5">
+                            {/* <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} /> */}
+                            <div style={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"10px",border:"solid",borderColor:"black",borderRadius:"12px",alignItems:"center"}}>
+                                <div >
+                                    <img src={each.imageUrl} className="rounded-full" height="200" width="200" />
+                                </div>
+                            <div style={{textAlign:"center"}}>
+                                    <h6 className="text-black">{each.heading}</h6>
+                                    <p className="text-black">{each.desc}</p>
+                            </div>
+                            </div>
+                         </div>
+                    ))}
+                    
                     
                 </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <Typography component="div" key={'h2'} variant={'h2'}>
-                        <Skeleton width={500} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <Typography component="div" key={'p'} variant={'p'}>
-                        <Skeleton width={1000} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <Typography component="div" key={'h2'} variant={'h2'}>
-                        <Skeleton width={500} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <Typography component="div" key={'p'} variant={'p'}>
-                        <Skeleton width={1000} sx={{ bgcolor: 'grey.900' }}/>
-                    </Typography>
-                </div>
-                <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    <div style={{marginRight:"20px"}}>
-                        <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} />
-                    </div>
-                    
-                </div>
+
+                
+               
             </div>
         </div>
     )
 }
 
 const Home = ()=>{
+    const [showNextComponent, setShowNextComponent] = useState(false);
+
+    useEffect(() => {
+        // Set a timer for 5 seconds
+        const timer = setTimeout(() => {
+        setShowNextComponent(true);
+        }, 3000);
+
+        // Cleanup the timer if the component is unmounted
+        return () => clearTimeout(timer);
+    }, []);
     return(
-        <>
-            <SkeletonComponent/>
-            <OrginalComponent/>
+        <>  
+            {showNextComponent?<OrginalComponent/>:<SkeletonComponent/>}
+            
+            
         </>
     )
 }

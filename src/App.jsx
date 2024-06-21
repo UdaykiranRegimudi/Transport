@@ -19,12 +19,12 @@ const App = () =>{
         <Navbar/>
       </div>
       <div style={{display:"flex"}}>
-        <div style={{width:"20%",height:"100%",}}>
-          <div style={{top: 0,width: "100%", zIndex: 1000,marginTop:"8.5vh"}}>
+        <div style={{width:"10%",height:"30%",}}>
+          <div style={{top: 1,width: "5%", zIndex: 1000,marginTop:"30vh"}}>
           <Sidenavbar/> 
           </div>
         </div>
-        <div style={{marginTop:"8.5vh",width:"80%"}}>
+        <div style={{marginTop:"8.5vh",width:"85%"}}>
           <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<Home/>}/>
@@ -33,7 +33,14 @@ const App = () =>{
         </div>
       </div>
       <div className="chatbot" onClick={chatbotActive}>
-        <img src="https://cdn-icons-png.flaticon.com/512/2040/2040946.png" style={{height:"15vh"}} alt="chatbot"/>
+
+        {activeChat && <div style={{height:"80vh",width:"30vw"}}><iframe
+            src="https://4776ea3a0e037b0edc.gradio.live/"
+            style={{ width: '100%', height: '100%' }}
+            title="Example Website"
+            
+        ></iframe></div>}
+        <img src="https://cdn-icons-png.flaticon.com/512/2040/2040946.png" style={{height:"10vh"}} alt="chatbot"/>
       </div>
     </div>
    
