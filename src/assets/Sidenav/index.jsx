@@ -29,13 +29,13 @@ const CustomSidenav = ({ appearance, openKeys, expanded, onOpenChange, onExpand,
               Dashboard
             </Nav.Item>
             <Nav.Item eventKey="2"  icon={<GroupIcon />}>
-              User Group
+              New Taxes and Forms
             </Nav.Item>
             <Nav.Item eventKey="1"  active icon={<DashboardIcon />}>
-              Dashboard
+              Regulations
             </Nav.Item>
             <Nav.Item eventKey="2"  icon={<GroupIcon />}>
-              User Group
+              Norms
             </Nav.Item>
             
             

@@ -14,7 +14,7 @@ const App = () =>{
   }
 
   return(
-    <div style={{backgroundColor:"white",paddingTop:"0px",}}>
+    <div style={{backgroundColor:"black",paddingTop:"0px",}}>
       <div style={{position:"fixed",top: 0,width: "100%", zIndex: 1000}}>
         <Navbar/>
       </div>
@@ -35,7 +35,7 @@ const App = () =>{
       <div className="chatbot" onClick={chatbotActive}>
 
         {activeChat && <div style={{height:"80vh",width:"30vw"}}><iframe
-            src="https://4776ea3a0e037b0edc.gradio.live/"
+            src="https://3cfb6a560b49d4e9cb.gradio.live"
             style={{ width: '100%', height: '100%' }}
             title="Example Website"
             

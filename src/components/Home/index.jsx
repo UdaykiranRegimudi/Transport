@@ -52,11 +52,11 @@ const VehicleData = [
 ]
 
 const images = [
-    {imageUrl:"/C1.png"},
-    {imageUrl:"/C2.png"},,
-    {imageUrl:"/C3.png"},
-    {imageUrl:"/C4.png"},
-    {imageUrl:"/C5.png"},
+    {imageUrl:"how-doorstep-delivery-will-work.webp"},
+    {imageUrl:"banner2.jpg"},,
+    {imageUrl:"learners-license-1024x640.jpg"},
+    {imageUrl:"images (5).jpeg"},
+    {imageUrl:"driving-license-test-1.jpeg"},
 ]
 
 
@@ -69,7 +69,7 @@ const SkeletonComponent = () => {
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
                     <Carousel autoplay className="custom-slider" style={{width:"70%"}}>
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1" height="250" /> 
-                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=2" height="250" />
+                        <img src="" height="250" />
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=3" height="250" />
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4" height="250" />
                         <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5" height="250" />
@@ -123,35 +123,31 @@ const OrginalComponent = () =>{
                 
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
                     <Carousel autoplay className="custom-slider" style={{width:"70%"}}>
-                        {/* {images.map((each,index) => {
+                        {images.map((each,index) => {
                             return(
                                 <img key={index} src={each.imageUrl} height="250" />
                             )
-                        })} */}
-                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1" height="250" /> 
-                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=2" height="250" />
-                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=3" height="250" />
-                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4" height="250" />
-                        <img src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5" height="250" />
+                        })}
+                        
                     </Carousel>
                 </div>
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <h4 style={{color:"red"}}>License Related Services</h4>
+                    <h4 style={{color:"white"}}>License Related Services</h4>
                 </div>
                 <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <p style={{color:"green"}}>Various services related to new/old driving licence or learner's licence like Appointment Booking, Duplicate driving licence, Application Status, Online test for learner's licence, etc.</p>
+                    <p style={{color:"yellow"}}>Various services related to new/old driving licence or learner's licence like Appointment Booking, Duplicate driving licence, Application Status, Online test for learner's licence, etc.</p>
                 </div>
                 <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
                     {LicenseData.map(each =>(
                         <div style={{marginRight:"20px",height:"43vh"}} className="w-1/5">
                             {/* <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} /> */}
-                            <div style={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"10px",border:"solid",borderColor:"black",borderRadius:"12px",alignItems:"center"}}>
+                            <div style={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"10px",border:"solid",borderColor:"grey",borderRadius:"12px",alignItems:"center"}}>
                                 <div >
                                     <img src={each.imageUrl} className="rounded-full" height="200" width="200" />
                                 </div>
                             <div style={{textAlign:"center"}}>
-                                    <h6 className="text-black">{each.heading}</h6>
-                                    <p className="text-black">{each.desc}</p>
+                                    <h6 className="text-grey">{each.heading}</h6>
+                                    <p className="text-grey">{each.desc}</p>
                             </div>
                             </div>
                          </div>
@@ -159,22 +155,22 @@ const OrginalComponent = () =>{
                     
                 </div>
                 <div style={{display:"flex",justifyContent:"center",marginTop:"10px"}}>
-                    <h4 style={{color:"red"}}>Vehicle Related Services</h4>
+                    <h4 style={{color:"white"}}>Vehicle Related Services</h4>
                 </div>
                 <div style={{display:"flex",justifyContent:"center",marginTop:"5px"}}>
-                    <p style={{color:"green"}}>Various services related to registration of vehicle/already registered vehicle like Appointment Booking, Application Status, Duplicate Registration, Change of Address etc.</p>
+                    <p style={{color:"yellow"}}>Various services related to registration of vehicle/already registered vehicle like Appointment Booking, Application Status, Duplicate Registration, Change of Address etc.</p>
                 </div>
                 <div style={{display:"flex",justifyContent:"center",flexWrap:"wrap",marginTop:"10px"}}>
                     {VehicleData.map(each =>(
                         <div style={{marginRight:"20px",height:"43vh"}} className="w-1/5">
                             {/* <Skeleton variant="rounded" width={250} height={350} sx={{ bgcolor: 'grey.900' }} /> */}
-                            <div style={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"10px",border:"solid",borderColor:"black",borderRadius:"12px",alignItems:"center"}}>
+                            <div style={{height:"100%",display:"flex",flexDirection:"column",justifyContent:"space-between",padding:"10px",border:"solid",borderColor:"grey",borderRadius:"12px",alignItems:"center"}}>
                                 <div >
                                     <img src={each.imageUrl} className="rounded-full" height="200" width="200" />
                                 </div>
                             <div style={{textAlign:"center"}}>
-                                    <h6 className="text-black">{each.heading}</h6>
-                                    <p className="text-black">{each.desc}</p>
+                                    <h6 className="text-grey">{each.heading}</h6>
+                                    <p className="text-grey">{each.desc}</p>
                             </div>
                             </div>
                          </div>
