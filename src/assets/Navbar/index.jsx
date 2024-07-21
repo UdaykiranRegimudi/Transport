@@ -16,6 +16,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import Button from '@mui/material/Button';
 
 import { styled, alpha } from '@mui/material/styles';
+import { UserButton } from '@clerk/clerk-react';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -91,26 +92,7 @@ function Navbar() {
   };
 
   const menuId = 'primary-search-account-menu';
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right',
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
+  
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
@@ -176,113 +158,11 @@ function Navbar() {
           TRANSPORT
         </Typography>
 
-        {/* <div style={{width:"60%",display:"flex"}}>
-          <div>
-            <Button
-                id="custom-button"
-                aria-controls={isOpen ? 'custom-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={isOpen ? 'true' : undefined}
-                onClick={handleOpenMenu}
-                style={{ color: 'white', marginTop: "10px" }}
-            >
-                <p> Online Services</p>
-            </Button>
-            <Menu
-                id="custom-menu"
-                anchorEl={menuAnchorEl}
-                open={isOpen}
-                onClose={handleCloseMenu}
-                MenuListProps={{
-                'aria-labelledby': 'custom-button',
-                }}
-            >
-                <MenuItem onClick={handleCloseMenu}>Profile</MenuItem>
-                <MenuItem onClick={handleCloseMenu}>My account</MenuItem>
-                <MenuItem onClick={handleCloseMenu}>Logout</MenuItem>
-            </Menu>
-          </div>
-          <div>
-            <Button
-                id="custom-button"
-                aria-controls={isOpen ? 'custom-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={isOpen ? 'true' : undefined}
-                onClick={handleOpenMenu}
-                style={{ color: 'white', marginTop: "10px" }}
-            >
-                <p> Informational Services</p>
-            </Button>
-            <Menu
-                id="custom-menu"
-                anchorEl={menuAnchorEl}
-                open={isOpen}
-                onClose={handleCloseMenu}
-                MenuListProps={{
-                'aria-labelledby': 'custom-button',
-                }}
-            >
-                <MenuItem onClick={handleCloseMenu}>Profile</MenuItem>
-                <MenuItem onClick={handleCloseMenu}>My account</MenuItem>
-                <MenuItem onClick={handleCloseMenu}>Logout</MenuItem>
-            </Menu>
-          </div>
-          <div>
-            <Button
-                id="custom-button"
-                aria-controls={isOpen ? 'custom-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={isOpen ? 'true' : undefined}
-                onClick={handleOpenMenu}
-                style={{ color: 'white', marginTop: "10px" }}
-            >
-                <p> Dashboard & Report</p>
-            </Button>
-            <Menu
-                id="custom-menu"
-                anchorEl={menuAnchorEl}
-                open={isOpen}
-                onClose={handleCloseMenu}
-                MenuListProps={{
-                'aria-labelledby': 'custom-button',
-                }}
-            >
-                <MenuItem onClick={handleCloseMenu}>Profile</MenuItem>
-                <MenuItem onClick={handleCloseMenu}>My account</MenuItem>
-                <MenuItem onClick={handleCloseMenu}>Logout</MenuItem>
-            </Menu>
-          </div>
-          <div>
-            <Button
-                id="custom-button"
-                aria-controls={isOpen ? 'custom-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={isOpen ? 'true' : undefined}
-                onClick={handleOpenMenu}
-                style={{ color: 'white', marginTop: "10px" }}
-            >
-                <p> Contact Us</p>
-            </Button>
-            <Menu
-                id="custom-menu"
-                anchorEl={menuAnchorEl}
-                open={isOpen}
-                onClose={handleCloseMenu}
-                MenuListProps={{
-                'aria-labelledby': 'custom-button',
-                }}
-            >
-                <MenuItem onClick={handleCloseMenu}>Profile</MenuItem>
-                <MenuItem onClick={handleCloseMenu}>My account</MenuItem>
-                <MenuItem onClick={handleCloseMenu}>Logout</MenuItem>
-            </Menu>
-          </div>
-          
-        </div> */}
+       
         
 
         <div style={{ flexGrow: 1 }} />
-        <div style={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+        <div style={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center',justifyContent:"space-around" }}>
           <IconButton size="large" aria-label="show 4 new mails" color="inherit">
             <Badge badgeContent={4} color="error">
               <MailIcon />
@@ -297,18 +177,11 @@ function Navbar() {
               <NotificationsIcon />
             </Badge>
           </IconButton>
-          <IconButton
-            size="large"
-            edge="end"
-            aria-label="account of current user"
-            aria-controls={menuId}
-            aria-haspopup="true"
-            onClick={handleProfileMenuOpen}
-            color="inherit"
-          >
-            <AccountCircle />
-          </IconButton>
-        </div>
+         
+            <UserButton />
+
+            </div>
+      
         <div style={{ display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
@@ -323,7 +196,7 @@ function Navbar() {
         </div>
       </Toolbar>
       {renderMobileMenu}
-      {renderMenu}
+      
     </AppBar>
   );
 }

@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Navbar from './assets/Navbar'
 import Sidenavbar from './assets/Sidenav'
 import './App.css'
+import Chatbot from './components/Chatbot';
 const App = () =>{
 
   const [activeChat,setChatbot] = useState(false)
@@ -28,6 +29,7 @@ const App = () =>{
           <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<Home/>}/>
+              <Route exact path='/chatbot' element={<Chatbot/>}/>
             </Routes>
           </BrowserRouter>
         </div>
